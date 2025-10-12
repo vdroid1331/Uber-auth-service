@@ -54,7 +54,7 @@ public class AuthController {
                             .httpOnly(true)
                             .secure(false)
                             .path("/")
-                            .maxAge(cookieExpiry)
+                            .maxAge(7*24*3600)
                             .build();
             response.setHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
